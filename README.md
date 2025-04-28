@@ -14,11 +14,3 @@ Una API para gestionar una librería, permite realizar operaciones CRUD (Crear, 
     ### Obtener un libro por ID
 - **Descripción**: Obtiene un libro por su ID.
 - **Descripción**: Crea un nuevo libro.
-- **Cuerpo de la solicitud**:
-```json
-{
-  "title": "El gran libro",
-  "author": "Autor Famoso"
-}
-PUT /books/{id}
- ### Eliminar un libro por ID
