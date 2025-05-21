@@ -1,6 +1,7 @@
 package com.example.bookstore_api;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank; // ¡NUEVO IMPORT NECESARIO!
 
 @Entity
 public class Book {
@@ -8,7 +9,10 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "El título es obligatorio") // ¡NUEVA ANOTACIÓN!
     private String title;
+
+    @NotBlank(message = "El autor es obligatorio") // ¡NUEVA ANOTACIÓN!
     private String author;
 
     // Constructores
@@ -29,4 +33,3 @@ public class Book {
     public String getAuthor() { return author; }
     public void setAuthor(String author) { this.author = author; }
 }
-
